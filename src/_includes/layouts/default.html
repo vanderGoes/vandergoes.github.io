@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  {%- if title and title != site.title %}{% assign fullTitle = title | append: " · " | append: site.title %}{% else %}{% assign fullTitle = site.title | append: " · Data engineering lead" %}{% endif %}
+  {%- if title and title != site.title %}{% assign fullTitle = title | append: " · " | append: site.title %}{% else %}{% assign fullTitle = site.title | append: "" %}{% endif %}
   {%- if description %}{% assign desc = description %}{% elsif layout == "post" %}{% assign desc = content | summary %}{% else %}{% assign desc = site.description %}{% endif %}
   <title>{{ fullTitle }}</title>
   <meta name="description" content="{{ desc | escape }}">
@@ -29,22 +29,15 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="masthead">
-    <div class="wrap masthead__inner">
-      <a class="wordmark" href="/" aria-label="{{ site.title }}, home">
-        <span class="wordmark__mark" aria-hidden="true">vdG</span>
-        <span class="wordmark__name">{{ site.title }}</span>
-      </a>
-      <nav class="nav" aria-label="Main">
-        <a href="/#writing"{% if layout == 'post' %} aria-current="page"{% endif %}>Writing</a>
-        <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
-        <a href="mailto:{{ site.email }}">Contact</a>
-      </nav>
-    </div>
+  <header class="wrap masthead">
+    <a class="home" href="/">{{ site.title }}</a>
+    <nav>
+      <a href="/#writing">Writing</a>
+      <a href="/about/">About</a>
+    </nav>
   </header>
 
-  <main id="main">
+  <main>
     {{ content }}
   </main>
 

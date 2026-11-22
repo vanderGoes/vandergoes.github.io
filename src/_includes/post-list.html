@@ -1,23 +1,14 @@
 {%- assign years = posts | byYear -%}
-<div class="index">
+<ul class="posts">
 {%- for group in years %}
-  <section class="index__year" aria-labelledby="y{{ group.year }}">
-    <h3 class="index__label" id="y{{ group.year }}">{{ group.year }}</h3>
-    <ol class="index__list">
-    {%- for post in group.items %}
-      <li class="entry">
-        <a class="entry__link" href="{{ post.url }}">
-          <span class="entry__title">{{ post.data.title }}</span>
-          {%- if post.data.subtitle %}<span class="entry__sub">{{ post.data.subtitle }}</span>{% endif %}
-        </a>
-        <span class="entry__meta">
-          <time datetime="{{ post.date | isoDate }}">{{ post.date | date: "%d %b" }}</time>
-          {%- if post.data.external %}<span class="entry__flag" title="Full article on Medium">Medium</span>{% endif %}
-          {%- if post.data.lang == 'nl' %}<span class="entry__flag" title="Nederlandstalig">NL</span>{% endif %}
-        </span>
-      </li>
-    {%- endfor %}
-    </ol>
-  </section>
+  {%- for post in group.items %}
+  <li>
+    <span class="posts__year">{% if forloop.first %}{{ group.year }}{% endif %}</span>
+    <span>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      {%- if post.data.lang == 'nl' %} <span class="muted">(Dutch)</span>{% endif %}
+    </span>
+  </li>
+  {%- endfor %}
 {%- endfor %}
-</div>
+</ul>

@@ -2,23 +2,16 @@
 layout: default
 permalink: /
 ---
-<section class="hero wrap">
-  <p class="kicker">Data engineering lead</p>
-  <h1 class="hero__title">Maurits van der Goes</h1>
-  <div class="hero__body">
+<div class="wrap">
+  <section class="intro">
+    <h1>Maurits van der Goes</h1>
     <p>I'm a data engineering lead at QuantumBlack, AI by McKinsey. I work on AI builds and the strategic questions around them.</p>
     <p>Before that I led MLOps standardisation at HEINEKEN and built recommender systems and data platforms at RTL Nederland. I studied at Delft University of Technology.</p>
-  </div>
-  <p class="hero__links">
-    <a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a>
-    <a class="link-arrow" href="/about/">More about me <span aria-hidden="true">→</span></a>
-  </p>
-</section>
+    <p>You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>. There's a bit more on the <a href="/about/">about page</a>.</p>
+  </section>
 
-<section class="wrap writing" id="writing" aria-labelledby="writing-title">
-  <div class="section-head">
-    <h2 id="writing-title">Writing</h2>
-    <p>{{ collections.posts | size }} pieces since {{ collections.posts.first.date | date: '%Y' }}, on recommender systems, MLOps, conferences and the odd essay.</p>
-  </div>
-  {% include "post-list.html", posts: collections.posts %}
-</section>
+  <section id="writing">
+    <h2>Writing</h2>
+    {% include "post-list.html", posts: collections.posts %}
+  </section>
+</div>
