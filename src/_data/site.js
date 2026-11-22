@@ -1,7 +1,7 @@
 export default {
   title: "Maurits van der Goes",
   description:
-    "Personal site of Maurits van der Goes, data engineering lead in Rotterdam. Writing on machine learning, data engineering and the occasional detour.",
+    "Personal site of Maurits van der Goes, data engineering lead. Writing on machine learning, data engineering and the occasional detour.",
   url: "https://mauritsvandergoes.nl",
   lang: "en",
   timezone: "Europe/Amsterdam",

@@ -5,7 +5,7 @@ kicker: About
 permalink: /about/
 ---
 
-I'm a data engineering lead at [QuantumBlack, AI by McKinsey](https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients). I work on AI builds and the strategic questions that come with them, across industries and currently mostly in life sciences and pharma.
+I'm a data engineering lead at [QuantumBlack, AI by McKinsey](https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients). I work on AI builds and the strategic questions that come with them.
 
 Before QuantumBlack I was a data engineer at The HEINEKEN Company, where I led MLOps standardisation and helped scale recommender systems across local operating companies. That work was presented at [RecSys 2021](https://dl.acm.org/doi/10.1145/3460231.3474616). Earlier I worked in the data team at RTL Nederland on personalisation for RTL Nieuws and Videoland, and for Jan Kees de Jager.
 
