@@ -1,19 +1,28 @@
+/* Colours borrowed from a code editor: one per kind of thing. */
 :root {
-  --bg: #fdfcf9;
-  --text: #222;
-  --muted: #6b6b6b;
-  --line: #e4e1da;
-  --link: #1a4fa0;
-  --font: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
+  --bg: #fbf8f1;
+  --text: #2b2b2b;
+  --muted: #6a8759;   /* comments */
+  --line: #e2dccd;
+  --link: #0b62b0;    /* functions */
+  --title: #a3245c;   /* keywords */
+  --number: #c0570c;  /* numbers */
+  --string: #2e7d32;  /* strings */
+  --mark: #fff1a8;
+  --font: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #181818;
-    --text: #e6e3dd;
-    --muted: #9a968e;
-    --line: #333;
-    --link: #8db4f0;
+    --bg: #1e2127;
+    --text: #d4d8df;
+    --muted: #7f9a74;
+    --line: #353a44;
+    --link: #61afef;
+    --title: #e06c9f;
+    --number: #e5a56b;
+    --string: #98c379;
+    --mark: #4a4220;
   }
 }
 
@@ -26,8 +35,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-size: 19px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .wrap {
@@ -37,12 +46,15 @@ body {
 }
 
 a { color: var(--link); }
-a:hover { text-decoration: none; }
+a:hover { text-decoration: none; background: var(--mark); }
+::selection { background: var(--mark); }
+a[href^="mailto:"] { color: var(--string); }
 
 img, iframe { max-width: 100%; height: auto; }
 
 h1, h2, h3 { line-height: 1.25; font-weight: 700; }
-h1 { font-size: 2rem; margin: 0 0 .5rem; }
+h1 { font-size: 1.9rem; margin: 0 0 1rem; color: var(--title); }
+h2 { color: var(--title); }
 h2 { font-size: 1.3rem; margin: 2.5rem 0 1rem; }
 h3 { font-size: 1.1rem; }
 
@@ -58,7 +70,7 @@ h3 { font-size: 1.1rem; }
   padding-top: 28px;
   padding-bottom: 28px;
 }
-.masthead .home { color: var(--text); font-weight: 700; text-decoration: none; }
+.masthead .home { color: var(--title); font-weight: 700; text-decoration: none; }
 .masthead nav a { margin-left: 1rem; color: var(--text); }
 .masthead nav a:first-child { margin-left: 0; }
 
@@ -82,7 +94,7 @@ h3 { font-size: 1.1rem; }
   gap: 1rem;
   padding: .3rem 0;
 }
-.posts__year { color: var(--muted); font-variant-numeric: tabular-nums; }
+.posts__year { color: var(--number); font-variant-numeric: tabular-nums; }
 
 /* Older writing, deliberately low-key */
 .archive { margin-top: 3.5rem; font-size: .9rem; }
@@ -119,6 +131,6 @@ h3 { font-size: 1.1rem; }
 .pager p { margin: 0 0 .3rem; }
 
 @media (max-width: 500px) {
-  body { font-size: 18px; }
-  h1 { font-size: 1.7rem; }
+  body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
 }
