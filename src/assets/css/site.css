@@ -1,14 +1,14 @@
-/* One hue (blue) in several tones, plus neutral text. */
+/* One hue (green) in several tones, on a warm light grey. */
 :root {
-  --bg: #e6edf5;
-  --text: #1f2933;
-  --title: #0b2545;   /* darkest blue */
-  --link: #1d5fa8;    /* mid blue */
-  --number: #5b8bc4;  /* light blue */
-  --string: #134074;  /* deep blue */
-  --muted: #677b94;   /* blue grey */
-  --line: #c6d3e2;
-  --mark: #c9dcf2;
+  --bg: #ecebe4;
+  --text: #22261f;
+  --title: #1f3b2a;   /* darkest green */
+  --link: #2f6b45;    /* mid green */
+  --number: #6f9a7c;  /* light green */
+  --string: #24502f;  /* deep green */
+  --muted: #6f776a;   /* green grey */
+  --line: #d3d4c9;
+  --mark: #d4e3d2;
   --font: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
 }
 
