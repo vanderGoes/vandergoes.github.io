@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   {%- if title and title != site.title %}{% assign fullTitle = title | append: " · " | append: site.title %}{% else %}{% assign fullTitle = site.title | append: "" %}{% endif %}
   {%- if description %}{% assign desc = description %}{% elsif layout == "post" %}{% assign desc = content | summary %}{% else %}{% assign desc = site.description %}{% endif %}
   <title>{{ fullTitle }}</title>

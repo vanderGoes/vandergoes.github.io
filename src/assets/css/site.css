@@ -1,30 +1,17 @@
 /* One hue (blue) in several tones, plus neutral text. */
 :root {
-  --bg: #f6f8fb;
+  --bg: #e6edf5;
   --text: #1f2933;
   --title: #0b2545;   /* darkest blue */
   --link: #1d5fa8;    /* mid blue */
   --number: #5b8bc4;  /* light blue */
   --string: #134074;  /* deep blue */
-  --muted: #7d8fa6;   /* blue grey */
-  --line: #d9e2ec;
-  --mark: #dce9f8;
+  --muted: #677b94;   /* blue grey */
+  --line: #c6d3e2;
+  --mark: #c9dcf2;
   --font: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0d1724;
-    --text: #d5dde7;
-    --title: #cfe2ff;
-    --link: #7fb0ec;
-    --number: #4f7fb8;
-    --string: #a9c9f2;
-    --muted: #6c819b;
-    --line: #22324a;
-    --mark: #1d3456;
-  }
-}
 
 * { box-sizing: border-box; }
 
