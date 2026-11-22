@@ -84,6 +84,20 @@ h3 { font-size: 1.1rem; }
 }
 .posts__year { color: var(--muted); font-variant-numeric: tabular-nums; }
 
+/* Profile */
+.profile dl { margin: 0; }
+.profile dt { font-weight: 700; margin-top: .9rem; }
+.profile dt:first-child { margin-top: 0; }
+.profile dd { margin: 0; }
+.plain { list-style: none; margin: 0; padding: 0; }
+.plain li { margin-bottom: .5rem; }
+
+/* Older writing, deliberately low-key */
+.archive { margin-top: 3.5rem; font-size: .9rem; }
+.archive h2 { font-size: 1.05rem; margin-bottom: .25rem; }
+.archive > .muted { margin: 0 0 .75rem; }
+.archive .posts li { grid-template-columns: 3rem 1fr; padding: .1rem 0; }
+
 /* Posts and pages */
 .post-head { margin: 2rem 0 1.5rem; }
 .post-head .subtitle { margin: 0 0 .25rem; font-size: 1.15rem; font-style: italic; }

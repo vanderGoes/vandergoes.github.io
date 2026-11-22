@@ -6,12 +6,45 @@ permalink: /
   <section class="intro">
     <h1>Maurits van der Goes</h1>
     <p>I'm a data engineering lead at QuantumBlack, AI by McKinsey. I work on AI builds and the strategic questions around them.</p>
-    <p>Before that I led MLOps standardisation at HEINEKEN and built recommender systems and data platforms at RTL Nederland. I studied at Delft University of Technology.</p>
-    <p>You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>. There's a bit more on the <a href="/about/">about page</a>.</p>
+    <p>You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
   </section>
 
-  <section id="writing">
-    <h2>Writing</h2>
+  <section class="profile" id="profile">
+    <h2>Experience</h2>
+    <dl>
+      <dt>QuantumBlack, AI by McKinsey</dt>
+      <dd>Data engineering lead. AI builds and the strategic questions that come with them.</dd>
+
+      <dt>The HEINEKEN Company</dt>
+      <dd>Data engineer. Led MLOps standardisation and helped scale recommender systems across local operating companies.</dd>
+
+      <dt>RTL Nederland</dt>
+      <dd>Data engineer and data scientist. Data platform on Spark and personalisation for RTL Nieuws and Videoland.</dd>
+
+      <dt>Earlier</dt>
+      <dd>Worked for Jan Kees de Jager, among others.</dd>
+    </dl>
+
+    <h2>Education</h2>
+    <dl>
+      <dt>Delft University of Technology</dt>
+      <dd>Graduated with research on collaborative filtering for team formation at Part-up.</dd>
+    </dl>
+
+    <h2>Talks</h2>
+    <ul class="plain">
+      <li><a href="https://dl.acm.org/doi/10.1145/3460231.3474616">Engineering local recommendations leveraging HEINEKEN's global scale</a>, RecSys 2021</li>
+      <li><a href="/2019/rtl-at-the-spark-ai-summit/">How data is transforming the Dutch media industry</a>, Spark+AI Summit Europe 2019</li>
+      <li><a href="/2016/collaborative-filtering-graphconnect-2016/">Creating the best team ever with collaborative filtering</a>, GraphConnect Europe 2016</li>
+    </ul>
+
+    <h2>Other</h2>
+    <p>Former board member of Stichting Stoelenproject, a night shelter for homeless people in Amsterdam.</p>
+  </section>
+
+  <section class="archive" id="writing">
+    <h2>Older writing</h2>
+    <p class="muted">Blog posts from {{ collections.posts.first.date | date: '%Y' }} to {{ collections.posts.last.date | date: '%Y' }}, kept for reference.</p>
     {% include "post-list.html", posts: collections.posts %}
   </section>
 </div>

@@ -7,6 +7,7 @@ const STATIC_REDIRECTS = [
   { from: "/page/2", to: "/#writing" },
   { from: "/page/3", to: "/#writing" },
   { from: "/rss", to: "/feed.xml" },
+  { from: "/about", to: "/#profile" },
 ];
 
 export default function (eleventyConfig) {

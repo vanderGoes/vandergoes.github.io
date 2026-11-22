@@ -29,13 +29,11 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  {%- if page.url != "/" %}
   <header class="wrap masthead">
     <a class="home" href="/">{{ site.title }}</a>
-    <nav>
-      <a href="/#writing">Writing</a>
-      <a href="/about/">About</a>
-    </nav>
   </header>
+  {%- endif %}
 
   <main>
     {{ content }}
