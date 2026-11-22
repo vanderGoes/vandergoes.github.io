@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: /
+---
+<div class="wrap">
+  <section class="intro" id="profile">
+    <h1>Maurits van der Goes</h1>
+    <p>I'm a data engineering lead at QuantumBlack, AI by McKinsey, where I work on AI builds and the strategic questions around them. Before that I led MLOps standardisation at HEINEKEN and worked on data platforms and personalisation at RTL Nederland.</p>
+    <p>I studied at Delft University of Technology. Outside work I was on the board of Stichting Stoelenproject, a night shelter for homeless people in Amsterdam. You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </section>
+
+  <section class="archive" id="writing">
+    <h2>Older writing</h2>
+    <p class="muted">Blog posts from {{ collections.posts.first.date | date: '%Y' }} to {{ collections.posts.last.date | date: '%Y' }}, kept for reference.</p>
+    {% include "post-list.html", posts: collections.posts %}
+  </section>
+</div>

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{%- assign prevPost = collections.posts | getPreviousCollectionItem: page -%}
+{%- assign nextPost = collections.posts | getNextCollectionItem: page -%}
+<article class="wrap">
+  <header class="post-head">
+    <h1>{{ title }}</h1>
+    {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+    <p class="muted"><time datetime="{{ page.date | isoDate }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+  </header>
+
+  {%- if cover %}
+  <img class="cover" src="{{ cover }}" alt="">
+  {%- endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <nav class="pager">
+    {%- if prevPost %}<p>Previous: <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></p>{% endif %}
+    {%- if nextPost %}<p>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+    <p><a href="/#writing">All posts</a></p>
+  </nav>
+</article>

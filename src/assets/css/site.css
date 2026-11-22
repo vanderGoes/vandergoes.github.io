@@ -1,0 +1,123 @@
+/* One hue (green) in several tones, on a warm light grey. */
+:root {
+  --bg: #ecebe4;
+  --text: #22261f;
+  --title: #1f3b2a;   /* darkest green */
+  --link: #2f6b45;    /* mid green */
+  --number: #6f9a7c;  /* light green */
+  --string: #24502f;  /* deep green */
+  --muted: #6f776a;   /* green grey */
+  --line: #d3d4c9;
+  --mark: #d4e3d2;
+  --font: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
+}
+
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--link); }
+a:hover { text-decoration: none; background: var(--mark); }
+::selection { background: var(--mark); }
+a[href^="mailto:"] { color: var(--string); }
+
+img, iframe { max-width: 100%; height: auto; }
+
+h1, h2, h3 { line-height: 1.25; font-weight: 700; }
+h1 { font-size: 1.9rem; margin: 0 0 1rem; color: var(--title); }
+h2 { color: var(--title); }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 1rem; }
+h3 { font-size: 1.1rem; }
+
+.muted { color: var(--muted); }
+
+/* Header and footer */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.masthead .home { color: var(--title); font-weight: 700; text-decoration: none; }
+.masthead nav a { margin-left: 1rem; color: var(--text); }
+.masthead nav a:first-child { margin-left: 0; }
+
+.footer {
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.footer p { margin: 0; padding-top: 1rem; border-top: 1px solid var(--line); }
+.footer a { color: var(--muted); }
+
+/* Home */
+.intro { margin: 4.5rem 0 1rem; }
+.intro p { margin: 0 0 1rem; }
+
+.posts { list-style: none; margin: 0; padding: 0; }
+.posts li {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1rem;
+  padding: .3rem 0;
+}
+.posts__year { color: var(--number); font-variant-numeric: tabular-nums; }
+
+/* Older writing, deliberately low-key */
+.archive { margin-top: 3.5rem; font-size: .9rem; }
+.archive h2 { font-size: 1.05rem; margin-bottom: .25rem; }
+.archive > .muted { margin: 0 0 .75rem; }
+.archive .posts li { grid-template-columns: 3rem 1fr; padding: .1rem 0; }
+
+/* Posts and pages */
+.post-head { margin: 2rem 0 1.5rem; }
+.post-head .subtitle { margin: 0 0 .25rem; font-size: 1.15rem; font-style: italic; }
+.post-head .muted { margin: 0; font-size: .95rem; }
+
+.cover { display: block; margin: 0 0 1.5rem; border-radius: 2px; }
+
+.prose p, .prose ul, .prose ol, .prose blockquote, .prose figure { margin: 0 0 1.1rem; }
+.prose ul, .prose ol { padding-left: 1.4rem; }
+.prose figure img { display: block; margin: 0 auto; }
+.prose figure iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.prose blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+}
+.prose .caption { margin-top: -.6rem; font-size: .85rem; color: var(--muted); }
+.prose .caption i { font-style: normal; }
+
+.pager {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: .95rem;
+}
+.pager p { margin: 0 0 .3rem; }
+
+@media (max-width: 500px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+}
