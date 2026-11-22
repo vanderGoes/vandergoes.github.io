@@ -1,28 +1,28 @@
-/* Colours borrowed from a code editor: one per kind of thing. */
+/* One hue (blue) in several tones, plus neutral text. */
 :root {
-  --bg: #fbf8f1;
-  --text: #2b2b2b;
-  --muted: #6a8759;   /* comments */
-  --line: #e2dccd;
-  --link: #0b62b0;    /* functions */
-  --title: #a3245c;   /* keywords */
-  --number: #c0570c;  /* numbers */
-  --string: #2e7d32;  /* strings */
-  --mark: #fff1a8;
+  --bg: #f6f8fb;
+  --text: #1f2933;
+  --title: #0b2545;   /* darkest blue */
+  --link: #1d5fa8;    /* mid blue */
+  --number: #5b8bc4;  /* light blue */
+  --string: #134074;  /* deep blue */
+  --muted: #7d8fa6;   /* blue grey */
+  --line: #d9e2ec;
+  --mark: #dce9f8;
   --font: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1e2127;
-    --text: #d4d8df;
-    --muted: #7f9a74;
-    --line: #353a44;
-    --link: #61afef;
-    --title: #e06c9f;
-    --number: #e5a56b;
-    --string: #98c379;
-    --mark: #4a4220;
+    --bg: #0d1724;
+    --text: #d5dde7;
+    --title: #cfe2ff;
+    --link: #7fb0ec;
+    --number: #4f7fb8;
+    --string: #a9c9f2;
+    --muted: #6c819b;
+    --line: #22324a;
+    --mark: #1d3456;
   }
 }
 
