@@ -1,0 +1,24 @@
+{
+  "name": "mauritsvandergoes-nl",
+  "version": "1.0.0",
+  "description": "Personal site of Maurits van der Goes",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "import-images": "bash scripts/import-tumblr-images.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanderGoes/vandergoes.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vanderGoes/vandergoes.github.io/issues"
+  },
+  "homepage": "https://github.com/vanderGoes/vandergoes.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "@11ty/eleventy-plugin-rss": "^3.1.0"
+  },
+  "private": true,
+  "type": "module"
+}

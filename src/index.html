@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /
+---
+<section class="hero wrap">
+  <p class="kicker">AI engineer · Rotterdam</p>
+  <h1 class="hero__title">I build AI systems that hold up outside the notebook.</h1>
+  <div class="hero__body">
+    <p>I'm Maurits van der Goes, an AI engineer at QuantumBlack, AI by McKinsey. I work on AI builds and the strategic questions around them, lately mostly in life sciences and pharma.</p>
+    <p>Before that I led MLOps standardisation at HEINEKEN and built recommender systems and data platforms at RTL Nederland. I studied at Delft University of Technology.</p>
+  </div>
+  <p class="hero__links">
+    <a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <a class="link-arrow" href="/about/">More about me <span aria-hidden="true">→</span></a>
+  </p>
+</section>
+
+<section class="wrap writing" id="writing" aria-labelledby="writing-title">
+  <div class="section-head">
+    <h2 id="writing-title">Writing</h2>
+    <p>{{ collections.posts | size }} pieces since {{ collections.posts.first.date | date: '%Y' }}, on recommender systems, MLOps, conferences and the odd essay.</p>
+  </div>
+  {% include "post-list.html", posts: collections.posts %}
+</section>

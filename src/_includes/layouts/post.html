@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{%- assign minutes = content | readingTime -%}
+{%- assign prevPost = collections.posts | getPreviousCollectionItem: page -%}
+{%- assign nextPost = collections.posts | getNextCollectionItem: page -%}
+<article class="post wrap">
+  <header class="post__head">
+    <p class="kicker">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {%- if minutes > 0 %}<span aria-hidden="true"> · </span>{{ minutes }} min read{% endif %}
+    </p>
+    <h1 class="post__title">{{ title }}</h1>
+    {%- if subtitle %}<p class="post__sub">{{ subtitle }}</p>{% endif %}
+  </header>
+
+  {%- if cover %}
+  <figure class="post__cover">
+    <img src="{{ cover }}" alt="">
+  </figure>
+  {%- endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {%- if external %}
+  <a class="callout" href="{{ external }}">
+    <span class="callout__label">Full article</span>
+    <span class="callout__text">Continue reading on Medium <span aria-hidden="true">↗</span></span>
+  </a>
+  {%- endif %}
+
+  <footer class="post__foot">
+    {%- if topics.size > 0 %}
+    <ul class="tags" aria-label="Topics">
+      {%- for t in topics %}<li>{{ t | downcase }}</li>{% endfor %}
+    </ul>
+    {%- endif %}
+    <nav class="pager" aria-label="More writing">
+      {%- if prevPost %}<a class="pager__prev" href="{{ prevPost.url }}"><span>Older</span>{{ prevPost.data.title }}</a>{% endif %}
+      {%- if nextPost %}<a class="pager__next" href="{{ nextPost.url }}"><span>Newer</span>{{ nextPost.data.title }}</a>{% endif %}
+    </nav>
+  </footer>
+</article>

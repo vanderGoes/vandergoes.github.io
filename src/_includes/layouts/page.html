@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="page wrap">
+  <header class="post__head">
+    <p class="kicker">{{ kicker | default: site.title }}</p>
+    <h1 class="post__title">{{ title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

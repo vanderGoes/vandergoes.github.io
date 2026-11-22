@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections.redirects
+  size: 1
+  alias: r
+permalink: "{{ r.from }}/index.html"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="{{ r.to | absoluteUrl }}">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ r.to }}">
+<p>This page moved to <a href="{{ r.to }}">{{ r.to | absoluteUrl }}</a>.</p>
+</html>
